@@ -1,0 +1,7 @@
+{
+  "name": "b22-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
