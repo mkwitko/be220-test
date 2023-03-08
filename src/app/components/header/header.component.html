@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ng-container>
+      <ion-buttons slot="start">
+        <ion-menu-button
+          autoHide
+          class="menu-button"
+          color="light"
+        ></ion-menu-button>
+      </ion-buttons>
+    </ng-container>
+    <ion-buttons slot="end">
+      <ion-button class="notify-button" (click)="notification()">
+        <ng-container>
+          <ion-badge color="success">
+            <ion-label color="success">.</ion-label>
+          </ion-badge>
+        </ng-container>
+        <ion-icon color="primary" slot="icon-only" name="notifications-sharp">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title> </ion-title>
+  </ion-toolbar>
+</ion-header>

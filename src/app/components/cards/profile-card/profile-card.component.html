@@ -1,0 +1,21 @@
+<div class="parent">
+  <div class="profile">
+    <ion-avatar>
+      <img [src]="user.picture" />
+    </ion-avatar>
+    <div class="name">
+      <h1 class="white">{{ user.name }}</h1>
+      <p [ngClass]="user.class">{{ user.level }}</p>
+    </div>
+  </div>
+  <div class="actions">
+    <ion-button fill="clear" class="ion-no-padding"
+      ><ion-icon name="accessibility-sharp"></ion-icon>
+      <ion-label>Meu corpo</ion-label>
+    </ion-button>
+    <ion-button fill="clear" class="ion-no-padding">
+      <ion-icon name="trophy-sharp"></ion-icon>
+      <ion-label>Objetivos e conquistas</ion-label>
+    </ion-button>
+  </div>
+</div>

@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,45 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "~swiper/swiper.min.css";
+@import "~@ionic/angular/css/ionic-swiper.css";
+
+@import "./theme/fonts.scss";
+
+ion-content {
+  --background: var(--ion-color-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.primary {
+  color: var(--ion-color-primary);
+}
+
+.purple {
+  color: var(--ion-color-secondary);
+}
+
+.white {
+  color: var(--ion-color-light);
+}
+
+.content {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.ion-no-padding {
+  --padding-start: 0 !important;
+  --padding-end: 0 !important;
+  --padding-top: 0 !important;
+  --padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

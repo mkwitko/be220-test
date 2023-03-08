@@ -1,3 +1,39 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-split-pane contentId="menu-content" when="xl">
+        <ion-menu class="menu" contentId="menu-content" side="start" type="overlay">
+            <ion-content>
+                <div class="menu-header-bg"></div>
+
+                <!-- <ng-container>
+                    <div class="header-content">
+                        <div class="profile">
+                            <ion-avatar>
+                                <ng-container>
+                                    <img src="../../../../assets/img/default-user.png" alt="">
+                                </ng-container>
+                            </ion-avatar>
+                            <p class="ion-text-center nome">Ola, Leonardo Santos</p>
+                        </div>
+                    </div>
+                </ng-container> -->
+
+                <ion-list lines="none">
+                    <ng-container *ngFor="let a of menu">
+                        <ion-item color="white" class="ion-margin-top" (click)="goTo(a.url)">
+                            <ion-icon color="white" slot="start" name={{a.icon}}></ion-icon>
+                            <ion-label color="white">{{a.title}}</ion-label>
+                        </ion-item>
+                    </ng-container>
+                </ion-list>
+            </ion-content>
+            <ion-footer>
+                <ion-toolbar>
+                    <ion-button (click)="logout()" expand="block" fill="clear" shape="round">
+                        <ion-label color="danger">LOGOUT</ion-label>
+                    </ion-button>
+                </ion-toolbar>
+            </ion-footer>
+        </ion-menu>
+        <ion-router-outlet id="menu-content"></ion-router-outlet>
+    </ion-split-pane>
 </ion-app>

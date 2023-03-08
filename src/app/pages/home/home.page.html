@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<ion-content>
+  <app-profile-card [user]="user.info"></app-profile-card>
+
+  <div class="content">
+    <ng-container *ngFor="let item of cards">
+      <app-home-card
+        [title]="item.sectionTitle"
+        [card]="item.cards"
+        [icon]="item.icon"
+        [isNew]="item.new"
+      ></app-home-card>
+    </ng-container>
+  </div>
+</ion-content>

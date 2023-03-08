@@ -1,0 +1,41 @@
+<div class="parent">
+  <app-title [title]="title" [icon]="icon" [isNew]="isNew"></app-title>
+
+  <swiper [slidesPerView]="1.5" [spaceBetween]="20">
+    <ng-template *ngFor="let item of card" swiperSlide>
+      <ion-card
+        *ngIf="!item.blank"
+        [style.background-image]="
+          item.picture ? 'url(' + item.picture + ')' : ''
+        "
+        [ngClass]="item.class"
+        class="card"
+      >
+        <div *ngIf="item.adding" class="add">
+          <ion-button
+            (click)="goTo(item.addUrl)"
+            expand="block"
+            fill="clear"
+            shape="round"
+          >
+            <ion-icon color="light" name="add"></ion-icon>
+            <ion-label color="light" *ngIf="item.addText">{{
+              item.addText
+            }}</ion-label>
+          </ion-button>
+        </div>
+        <div *ngIf="item.active || item.title" class="footer">
+          <p *ngIf="item.active" class="subtitle primary">
+            continuar treinando
+          </p>
+          <p *ngIf="item.title" class="title white">{{ item.title }}</p>
+        </div>
+      </ion-card>
+      <ion-card class="blank" *ngIf="item.blank">
+        <ng-container *ngIf="item.active">
+          <ion-card class="orange"></ion-card>
+        </ng-container>
+      </ion-card>
+    </ng-template>
+  </swiper>
+</div>

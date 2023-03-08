@@ -1,0 +1,22 @@
+//Fonts
+@font-face {
+  font-family: "agencyBold";
+  src: url("./../assets/fonts/bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "agency";
+  src: url("./../assets/fonts/normal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Setting Default Font
+:root,
+:root[mode="ios"],
+:root[mode="md"] {
+  --ion-font-family: "agency";
+  font-family: "agency";
+}

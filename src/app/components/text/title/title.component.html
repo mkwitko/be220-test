@@ -1,0 +1,14 @@
+<div class="flex">
+  <p class="title" [ngClass]="class ? class : 'white'">
+    {{ title }}
+  </p>
+  <div *ngIf="isNew" class="new">
+    <p class="white">novo</p>
+  </div>
+  <ion-icon
+    *ngIf="icon"
+    color="primary"
+    [ngClass]="classIcon"
+    name="{{ icon }}"
+  ></ion-icon>
+</div>
